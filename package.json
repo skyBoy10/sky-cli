@@ -1,5 +1,5 @@
 {
-  "name": "sky-cli",
+  "name": "@sky.long/sky-cli",
   "version": "1.0.0",
   "description": "自定义脚手架",
   "main": "index.js",

@@ -1,1 +1,1 @@
-{"tpl":{"vue-webpack":{"url":"https://github.com/vuejs-templates/webpack.git","branch":"develop"},"vue-simple":{"url":"https://github.com/vuejs-templates/simple.git","branch":"master"}}}
+{"tpl":{"vue-webpack":{"url":"https://github.com/vuejs-templates/webpack.git","branch":"develop"},"vue-simple":{"url":"https://github.com/vuejs-templates/simple.git","branch":"master"},"h5-react":{"url":"https://github.com/skyBoy10/h5-react-template.git","branch":"master"},"h5-vue":{"url":"https://github.com/skyBoy10/my-vue.git","branch":"master"}}}
