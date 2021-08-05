@@ -1,9 +1,12 @@
 #! /usr/bin/env node
 
 const program = require('commander');
+const list = require('../commanders/list');
+const init = require('../commanders/init');
+const package = require('../package.json');
 
 program
-.version('0.0.1')
+.version(package.version, '-v --version')
 .usage('<command>')
 
 /**
@@ -14,7 +17,7 @@ program
 .description('添加新模版')
 .alias('ad')
 .action(() => {
-    require('./commanders/add')();
+    require('../commanders/add')();
 });
 
 /**
@@ -25,7 +28,7 @@ program
 .description('查看所有模版')
 .alias('li')
 .action(() => {
-    require('./commanders/list')();
+    list();
 });
 
 /**
@@ -36,21 +39,23 @@ program
 .description('删除指定模版')
 .alias('de')
 .action(() => {
-    require('./commanders/delete')();
+    require('../commanders/delete')();
 });
 
 /**
  * 初始化指令
  */
 program
-.command('init')
+.name('fang')
+.usage('init [proName]')
+.command('init [proName]')
 .description('初始化项目')
 .alias('in')
-.action(() => {
-    require('./commanders/init')();
+.action((proName) => {
+    init(proName);
 });
 
-program.parse(process.argv);
+program.parse(process.argv); // 解析命令行，对注册的command，option等做解析，必须使用
 if (!program.args.length) {
     program.help();
 }
