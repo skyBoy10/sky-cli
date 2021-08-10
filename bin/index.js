@@ -26,7 +26,7 @@ program
 program
 .command('list')
 .description('查看所有模版')
-.alias('li')
+.alias('ls')
 .action(() => {
     list();
 });
@@ -35,6 +35,7 @@ program
  * 删除模版指令
  */
 program
+.name('sky')
 .command('delete')
 .description('删除指定模版')
 .alias('de')
@@ -46,7 +47,7 @@ program
  * 初始化指令
  */
 program
-.name('fang')
+.name('sky')
 .usage('init [proName]')
 .command('init [proName]')
 .description('初始化项目')
